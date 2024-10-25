@@ -1,0 +1,1 @@
+ALTER TABLE words ADD CONSTRAINT words_user_id_check CHECK (user_id > 0);

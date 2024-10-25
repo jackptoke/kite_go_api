@@ -1,0 +1,2 @@
+CREATE INDEX IF NOT EXISTS words_text_idx ON words USING GIN (to_tsvector('simple', text_value));
+CREATE INDEX IF NOT EXISTS words_difficulty_idx ON words USING GIN (to_tsvector('simple', difficulty));
