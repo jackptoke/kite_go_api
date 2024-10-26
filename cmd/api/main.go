@@ -8,6 +8,7 @@ import (
 	"fmt"
 	"kite-api/internal/data"
 	"kite-api/internal/mailer"
+	"kite-api/internal/vcs"
 	"log/slog"
 	"os"
 	"runtime"
@@ -18,7 +19,9 @@ import (
 	_ "github.com/lib/pq"
 )
 
-const version = "1.0.0"
+var (
+	version = vcs.Version()
+)
 
 type config struct {
 	port int
